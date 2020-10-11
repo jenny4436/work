@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+.clearfix:after{content:''; display: block; float:none; clear:both;}
+.clearfix>*{float:left;}
+
+body{background-color:black;color:white;font-weight:800;font-family: 'Oswald', sans-serif;}
+a{color:white;text-decoration: none;}
+.wrapper{max-width:1700px; margin:0 auto;}
+
+/* 헤더 */
+#header{border-bottom:1px solid #fff;}
+#header>.wrapper{display: flex; justify-content: space-between;}
+#header a{font-size: 23px; letter-spacing: 0.1vw; padding: 15px 2%; transition: all 0.1s; transition: all ease 0.1s; }
+#header a:hover{color:#777;}
+#header a.home{position: absolute; left: 50%; top: 0; transform: translateX(-50%);}
+
+
+/* 상단 연도 */
+#top_year{font-size:22.3vw;text-align: center;font-weight: 600; letter-spacing: -0.5vw;white-space: nowrap; overflow: hidden;padding-bottom: 3vw;}
+
+
+/* 메뉴 */
+.menu_wrap{border-top:1px solid #fff;border-bottom:1px solid #fff;}
+.menu_wrap>.row{}
+.menu_wrap>.row:after{content:''; display: block; float:none; clear:both;font-family: 'Work Sans', sans-serif;}
+.menu_wrap>.row>a{display:block;position:relative;float:left;box-sizing: border-box;text-align: center;}
+.menu_wrap>.row>.col6{width:57%;}
+.menu_wrap>.row>.col4{width:43%;}
+.menu_wrap>.row>a>.number{position:absolute;font-size: 3vw; left: 2vw; top: 1vw;transition: all 0.2s;}
+.menu_wrap>.row>a:hover>.number{color:#777;}
+.menu_wrap>.row>a>img{width:100%;}
+
+/* 메뉴 각각 지정 */
+.menu_wrap>.row>a.menu01{padding-top:2%;border-right: 1px solid #fff;}
+.menu_wrap>.row>a.menu01>img{}
+
+.menu_wrap>.row>a.menu02{padding:2% 6%;}
+.menu_wrap>.row>a.menu02>img{width:81%;}
+
+.menu_wrap>.row>a.menu03{padding:2%;text-align: right;border-right: 1px solid #fff;}
+.menu_wrap>.row>a.menu03>img{width: 80%;}
+
+.menu_wrap>.row>a.menu04{padding-top:6%;}
+.menu_wrap>.row>a.menu04>img{}
+
+.menu_wrap>.row>a.menu05{padding:2%;padding-top: 7%;}
+.menu_wrap>.row>a.menu05>img{}
+
+.menu_wrap>.row>a.menu06{padding:2% 1%;border-left: 1px solid #fff;}
+.menu_wrap>.row>a.menu06>img{}
+.menu_wrap>.row>a.menu06>img.hover{position:absolute;top:0;left:0;opacity:0;transition: opacity 0.5s;}
+.menu_wrap>.row>a.menu06:hover>img.hover{opacity:1;}
+
+#footer{text-align: center; font-size: 25px; padding: 5% 0; font-weight: 500;line-height: 1.2;border-bottom:1px solid #fff;}
+
+@media(min-width:1700px){
+	#top_year{font-size:390px;}
+}
+@media(max-width:800px){
+	.menu_wrap>.row>a>.number{font-size: 5vw;}
+	#header a{font-size: 18px;}
+	#footer{font-size:3vw}
+}
